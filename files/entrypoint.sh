@@ -53,6 +53,12 @@ set -e # exit on error
 	readme_directory = no
 	recipient_delimiter = +
 	smtputf8_enable = no
+
+	# AWS SES requires TLS >= v1.2 by 2023-09-15
+	# https://aws.amazon.com/blogs/security/tls-1-2-required-for-aws-endpoints/
+	smtp_tls_mandatory_protocols  = >= TLSv1.2
+	smtp_tls_protocols            = >= TLSv1.2
+
 	EOF
 
 # Generate default postfix alias database
