@@ -58,6 +58,7 @@ set -e # exit on error
 	# https://aws.amazon.com/blogs/security/tls-1-2-required-for-aws-endpoints/
 	smtp_tls_mandatory_protocols  = >= TLSv1.2
 	smtp_tls_protocols            = >= TLSv1.2
+	smtp_tls_loglevel             = 1
 
 	EOF
 
