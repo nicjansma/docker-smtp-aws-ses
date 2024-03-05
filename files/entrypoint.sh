@@ -47,6 +47,9 @@ set -e # exit on error
 	# Custom transport map or advanced usage
 	transport_maps = pcre:/etc/postfix/transport_maps
 
+	# Header checks
+	header_checks = pcre:/etc/postfix/header_checks
+
 	# Some tweaks
 	biff = no
 	mailbox_size_limit = 0
